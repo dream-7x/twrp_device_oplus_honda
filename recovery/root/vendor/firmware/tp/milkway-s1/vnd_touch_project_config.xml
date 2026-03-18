@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="milkway-s1">
+	<version>20240722</version>
+	<device id="0" ic_name="ft3683g">
+		<afelib>libfts.so</afelib>
+		<algolib>libthpalgo.so</algolib>
+		<panel vendor="tianma" alias="AC223" hint="">
+				<algo-config scence="default" path="vnd_algo_config_main.xml" />
+				<custom-config scence="default" path="vnd_custom_config_main.xml" />
+				<firmware-config path="vnd_tp_fw_main.bin" />
+				<grip-config path="vnd_edge_touch_config_main.xml" />
+				<touchScene-config path="vnd_touch_scene_config_main.xml" />
+		</panel>
+	</device>
+
+</project>

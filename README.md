@@ -1,1 +1,10 @@
-# twrp_device_oplus_honda
+# Android device tree for oplus ossi (ossi)
+
+```
+#
+# Copyright (C) 2026 The Android Open Source Project
+# Copyright (C) 2026 SebaUbuntu's TWRP device tree generator
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+```
