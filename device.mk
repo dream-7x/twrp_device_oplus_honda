@@ -19,13 +19,17 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-service
 
 PRODUCT_PACKAGES += \
-    bootctrl.common
+    bootctrl
 
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    bootctrl.common \
-    libgptutils \
-    libz \
-    libcutils
+# MTK PlPath Utils
+PRODUCT_PACKAGES += \
+    mtk_plpath_utils.recovery
+
+# Fastbootd
+TW_INCLUDE_FASTBOOTD := true
+
+PRODUCT_PACKAGES += \
+    android.hardware.fastboot@1.0-impl-mock
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
