@@ -27,8 +27,18 @@ AB_OTA_PARTITIONS += \
     vbmeta_system \
     odm
 
-BOARD_USES_RECOVERY_AS_BOOT := false
-BOARD_HAS_VENDOR_RAMDISK := true
+# Vendor boot
+BOARD_BOOT_HEADER_VERSION := 4
+BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 67108864
+
+BOARD_USES_RECOVERY_AS_BOOT := true
+BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
+BOARD_INCLUDE_RECOVERY_RAMDISK_IN_VENDOR_BOOT := true
+
+# Kernel modules
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := \
+    $(wildcard device/oplus/honda/recovery/root/lib/modules/*.ko)
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
